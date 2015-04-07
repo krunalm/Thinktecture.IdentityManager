@@ -7,11 +7,13 @@
     <ProjectGuid>{319E13DD-C16A-4936-B179-BBFBA52C693B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Thinktecture.IdentityManager.Core</RootNamespace>
-    <AssemblyName>Thinktecture.IdentityManager.Core</AssemblyName>
+    <RootNamespace>IdentityManager</RootNamespace>
+    <AssemblyName>IdentityManager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,29 +33,51 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Autofac.3.3.1\lib\net40\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Integration.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Autofac.WebApi2.3.2.1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.FileSystems, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="AutoMapper.Net4, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Owin.FileSystems.2.1.0\lib\net40\Microsoft.Owin.FileSystems.dll</HintPath>
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.StaticFiles, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Owin.StaticFiles.2.1.0\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.FileSystems, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.FileSystems.3.0.0\lib\net45\Microsoft.Owin.FileSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Jwt">
+      <HintPath>..\packages\Microsoft.Owin.Security.Jwt.3.0.0\lib\net45\Microsoft.Owin.Security.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.StaticFiles, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.0.0\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -62,58 +86,135 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.1\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http.Owin, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Http.Owin, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.1.2\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.2\lib\net45\System.Web.Http.Owin.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Thinktecture.IdentityModel.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Thinktecture.IdentityModel.Core.1.3.0\lib\net45\Thinktecture.IdentityModel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinktecture.IdentityModel.Owin">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Owin.2.1.1\lib\net45\Thinktecture.IdentityModel.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinktecture.IdentityModel.Owin.ScopeValidation">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Owin.ScopeValidation.2.0.0\lib\net45\Thinktecture.IdentityModel.Owin.ScopeValidation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\Controllers\PageController.cs" />
+    <Compile Include="Api\Controllers\RoleController.cs" />
     <Compile Include="Api\Filters\NoCacheAttribute.cs" />
+    <Compile Include="Api\Filters\SecurityHeadersAttribute.cs" />
+    <Compile Include="Api\Models\CreateUserLink.cs" />
+    <Compile Include="Api\Models\CreateRoleLink.cs" />
+    <Compile Include="Api\Models\ErrorModel.cs" />
+    <Compile Include="Api\Models\RoleDetailResource.cs" />
+    <Compile Include="Api\Models\UserDetailResource.cs" />
+    <Compile Include="Api\Models\RoleQueryResultResource.cs" />
+    <Compile Include="Api\Models\UserQueryResultResource.cs" />
+    <Compile Include="App_Packages\LibLog.1.4\LibLog.cs" />
     <Compile Include="Assets\AssetManager.cs" />
     <Compile Include="Assets\EmbeddedHtmlResult.cs" />
     <Compile Include="Configuration\AppBuilderExtensions.cs" />
     <Compile Include="Configuration\AutofacConfig.cs" />
-    <Compile Include="Configuration\IdentityManagerConfiguration.cs" />
+    <Compile Include="Configuration\Hosting\AutofacContainerMiddleware.cs" />
+    <Compile Include="Configuration\Hosting\AutofacDependencyResolver.cs" />
+    <Compile Include="Configuration\Hosting\AutofacScope.cs" />
+    <Compile Include="Configuration\Hosting\KatanaDependencyResolver.cs" />
+    <Compile Include="Configuration\Hosting\LocalAuthenticationMiddleware\LocalAuthenticationHandler.cs" />
+    <Compile Include="Configuration\Hosting\LocalAuthenticationMiddleware\LocalAuthenticationMiddleware.cs" />
+    <Compile Include="Configuration\Hosting\LocalAuthenticationMiddleware\LocalAuthenticationOptions.cs" />
+    <Compile Include="Configuration\Hosting\LogProviderExceptionLogger.cs" />
+    <Compile Include="Configuration\Hosting\TraceLogger.cs" />
+    <Compile Include="Configuration\IdentityManagerServiceFactory.cs" />
+    <Compile Include="Configuration\IDependencyResolver.cs" />
+    <Compile Include="Configuration\OAuth2Configuration.cs" />
+    <Compile Include="Configuration\IdentityManagerOptions.cs" />
+    <Compile Include="Configuration\Registration.cs" />
+    <Compile Include="Configuration\SecurityConfiguration.cs" />
+    <Compile Include="Configuration\SecurityMode.cs" />
     <Compile Include="Configuration\WebApiConfig.cs" />
     <Compile Include="Api\Controllers\MetaController.cs" />
     <Compile Include="Api\Controllers\UserController.cs" />
-    <Compile Include="Api\Models\Claim.cs" />
-    <Compile Include="Api\Models\CreateUser.cs" />
-    <Compile Include="Api\Models\DeleteUser.cs" />
-    <Compile Include="Api\Models\SetEmail.cs" />
-    <Compile Include="Api\Models\SetPassword.cs" />
-    <Compile Include="Api\Models\SetPhone.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Core\Metadata\ExpressionPropertyMetadata.cs" />
+    <Compile Include="Core\Metadata\ExecutablePropertyMetadata.cs" />
+    <Compile Include="Core\Metadata\ReflectedPropertyMetadata.cs" />
+    <Compile Include="Core\Metadata\RoleMetadata.cs" />
+    <Compile Include="Core\Metadata\UserMetadata.cs" />
+    <Compile Include="Core\Metadata\PropertyDataType.cs" />
+    <Compile Include="Core\Metadata\PropertyMetadata.cs" />
     <Compile Include="Core\CreateResult.cs" />
-    <Compile Include="Core\IUserManager.cs" />
-    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Core\IIdentityManagerService.cs" />
+    <Compile Include="Core\ClaimValue.cs" />
+    <Compile Include="Core\OwinEnvironmentService.cs" />
+    <Compile Include="Core\RoleDetail.cs" />
+    <Compile Include="Core\UserDetail.cs" />
+    <Compile Include="Core\RoleSummary.cs" />
+    <Compile Include="Extensions\ClaimsExtensions.cs" />
+    <Compile Include="Extensions\ModelStateDictionaryExtensions.cs" />
+    <Compile Include="Extensions\IdentityManagerResultExtensions.cs" />
+    <Compile Include="Extensions\OwinExtensions.cs" />
+    <Compile Include="Extensions\PropertyInfoExtensions.cs" />
+    <Compile Include="Extensions\PropertyMetadataExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\RoleMetadataExtensions.cs" />
+    <Compile Include="Extensions\UserMetadataExtensions.cs" />
+    <Compile Include="Logging\DiagnosticsTraceLogProvider.cs" />
+    <Compile Include="Logging\LibLogTraceListener.cs" />
+    <Compile Include="Logging\LogSerializer.cs" />
+    <Compile Include="Logging\RequestResponseLogger.cs" />
+    <Compile Include="Logging\TraceSourceLogProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\QueryResult.cs" />
-    <Compile Include="Core\UserClaim.cs" />
-    <Compile Include="Core\UserManagerMetadata.cs" />
-    <Compile Include="Core\UserManagerResult`1.cs" />
-    <Compile Include="Core\UserManagerResult.cs" />
-    <Compile Include="Core\UserResult.cs" />
+    <Compile Include="Core\PropertyValue.cs" />
+    <Compile Include="Core\Metadata\IdentityManagerMetadata.cs" />
+    <Compile Include="Core\IdentityManagerResult`1.cs" />
+    <Compile Include="Core\IdentityManagerResult.cs" />
+    <Compile Include="Core\UserSummary.cs" />
+    <Compile Include="Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Content\Bundle.css">
       <DependentUpon>Bundle.css.bundle</DependentUpon>
     </Content>
+    <EmbeddedResource Include="Assets\Templates\frame.html" />
+    <EmbeddedResource Include="Assets\Templates\users\accessdenied.html" />
+    <EmbeddedResource Include="Assets\Templates\roles\new.html" />
+    <EmbeddedResource Include="Assets\Templates\roles\list.html" />
+    <EmbeddedResource Include="Assets\Templates\roles\edit.html" />
+    <EmbeddedResource Include="Assets\Templates\editor\property.html" />
+    <EmbeddedResource Include="Assets\Templates\pager\buttons.html" />
+    <EmbeddedResource Include="Assets\Templates\pager\summary.html" />
+    <EmbeddedResource Include="Assets\Templates\modal.html" />
+    <EmbeddedResource Include="Assets\Templates\message.html" />
+    <EmbeddedResource Include="Assets\Templates\navbar.html" />
     <EmbeddedResource Include="Assets\Content\Bundle.min.css">
       <DependentUpon>Bundle.css</DependentUpon>
     </EmbeddedResource>
@@ -125,25 +226,34 @@
       <DependentUpon>Style.css</DependentUpon>
     </Content>
     <EmbeddedResource Include="Assets\Templates\index.html" />
-    <Content Include="Assets\Scripts\App\app.js" />
+    <Content Include="Assets\Scripts\App\frame.js" />
+    <Content Include="Assets\Scripts\App\oidc.js" />
+    <Content Include="Assets\Scripts\App\ttIdm.js" />
+    <Content Include="Assets\Scripts\App\ttIdmApp.js" />
+    <Content Include="Assets\Scripts\App\ttIdmRoles.js" />
+    <Content Include="Assets\Scripts\App\ttIdmUsers.js" />
+    <Content Include="Assets\Scripts\App\ttIdmUI.js" />
     <EmbeddedResource Include="Assets\Scripts\Bundle.js">
       <DependentUpon>Bundle.js.bundle</DependentUpon>
     </EmbeddedResource>
-    <Content Include="Assets\Scripts\Libs\angular-route.js" />
+    <EmbeddedResource Include="Assets\Scripts\Frame.js">
+      <DependentUpon>Frame.js.bundle</DependentUpon>
+    </EmbeddedResource>
     <Content Include="Assets\Scripts\Libs\angular-route.min.js" />
-    <Content Include="Assets\Scripts\Libs\angular.1.2.13.js" />
-    <Content Include="Assets\Scripts\Libs\angular.1.2.13.min.js" />
-    <Content Include="Assets\Scripts\Libs\bootstrap.js" />
+    <Content Include="Assets\Scripts\Libs\angular.min.js" />
     <Content Include="Assets\Scripts\Libs\bootstrap.min.js" />
-    <Content Include="Assets\Scripts\Libs\jquery-2.1.0.js" />
     <Content Include="Assets\Scripts\Libs\jquery-2.1.0.min.js" />
     <EmbeddedResource Include="Assets\Templates\home.html" />
     <EmbeddedResource Include="Assets\Templates\users\edit.html" />
     <EmbeddedResource Include="Assets\Templates\users\list.html" />
     <EmbeddedResource Include="Assets\Templates\users\new.html" />
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Assets\Scripts\Frame.js.bundle" />
     <None Include="packages.config" />
-    <None Include="Assets\Scripts\Libs\jquery-2.1.0.intellisense.js" />
     <None Include="..\default.licenseheader">
       <Link>default.licenseheader</Link>
     </None>
@@ -200,9 +310,18 @@
     <EmbeddedResource Include="Assets\Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Assets\Content\Style.less" />
     <None Include="Assets\Scripts\Bundle.js.bundle" />
-    <Content Include="Assets\Scripts\Libs\jquery-2.1.0.min.map" />
+    <None Include="IdentityManager.nuspec" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

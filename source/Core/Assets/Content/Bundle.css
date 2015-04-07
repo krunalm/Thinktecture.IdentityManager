@@ -5773,18 +5773,20 @@ button.close {
   }
 }
 body {
-  margin-top: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 .section {
-  padding: 15px 0;
+  padding: 10px 0;
 }
 .line {
-  padding: 15px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
-form label.column {
+.form-group label {
   display: inline-block;
-  width: 100px;
+  width: 150px;
+  position: relative;
 }
 .dropdown .dropdown-toggle {
   cursor: pointer;
@@ -5841,5 +5843,45 @@ form label.column {
   100% {
     opacity: 0.2;
   }
+}
+.errors {
+  margin: 0;
+}
+.errors li {
+  list-style-type: none;
+}
+.user-edit-regular.form-control {
+  width: 289px;
+}
+.user-edit-wide.form-control {
+  width: 582px;
+}
+.line .btn {
+  width: 60px;
+}
+.ng-hide {
+  display: none !important;
+}
+.form-group label input[type="checkbox"] {
+  position: absolute;
+  left: 155px;
+}
+.user-noroles {
+  margin-top: 20px;
+}
+.user-roles .alert {
+  margin-top: 20px;
+}
+.user-roles form {
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.user-roles input {
+  margin-left: 40px;
+  margin-right: 30px;
+}
+.user-roles label {
+  display: inline-block;
+  width: 200px;
 }
 

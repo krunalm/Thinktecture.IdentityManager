@@ -25,41 +25,36 @@
     </div>
 </div>
 
-<div class="row" ng-hide="model.users || model.waiting || model.message">
+<div class="row" ng-hide="model.waiting || model.message || (model.users.length > 0)">
     <div class="col-sm-8">
         <div class="alert alert-info">No Users Found</div>
     </div>
 </div>
 
-<div class="row" ng-show="model.users">
+<div class="row" ng-show="model.users.length > 0">
     <table class="table table-condensed table-responsive table-striped xtable-bordered">
         <thead>
             <tr>
                 <th></th>
-                <th>Display Name</th>
+                <th>Name</th>
                 <th>Username</th>
                 <th>Subject</th>
             </tr>
         </thead>
         <tr ng-repeat="user in model.users">
-            <td><a href="#/edit/{{user.subject}}" class="btn btn-primary btn-xs">edit</a></td>
-            <td>{{user.displayName}}</td>
-            <td>{{user.username}}</td>
-            <td>{{user.subject}}</td>
+            <td><a ng-show="user.links.detail" href="#/users/edit/{{user.data.subject}}" class="btn btn-primary btn-xs">edit</a></td>
+            <td>{{user.data.name}}</td>
+            <td>{{user.data.username}}</td>
+            <td>{{user.data.subject}}</td>
         </tr>
     </table>
 </div>
 
 <div class="row" ng-show="model.pager">
     <div class="col-sm-8">
-        <ul class="center-block pagination">
-            <li ng-repeat="button in model.pager.buttons"
-                ng-class="!button.enabled ? 'disabled' : (button.current ? 'active':'')">
-                <a href="#/list/{{model.pager.filter}}/{{button.page}}" ng-bind-html="button.text"></a>
-            </li>
-        </ul>
+        <tt-pager-buttons pager="model.pager" path="users"></tt-pager-buttons>
     </div>
     <div class="col-sm-4 pager-text">
-        <strong>Page</strong> <span class="badge bg-active">{{model.pager.currentPage}}</span> <strong>of</strong> <span class="badge">{{model.pager.totalPages}}</span>
+        <tt-pager-summary pager="model.pager"></tt-pager-summary>
     </div>
 </div>
